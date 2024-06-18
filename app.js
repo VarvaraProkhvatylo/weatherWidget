@@ -23,7 +23,7 @@ function weather() {
       let img = document.querySelector(".icon");
       let icon = data.weather[0].icon;
       console.log(icon);
-      //   img.setAttribute("id", icon, "width", "60px", "height", "60px");
+      img.setAttribute("src", weather.icon);
       img.append(icon);
 
       let tempera = document.querySelector(".temp");
