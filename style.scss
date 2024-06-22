@@ -39,9 +39,9 @@ body {
             margin-right: 15px;
 
         .icon {
-            width: 90px;
-            height: 90px;
-            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            // background-color: yellow;
 
          img {
             width: 100px;
@@ -51,7 +51,8 @@ body {
         .description {
             width: 100px;
             height: 100px;
-            background-color: rgb(184, 49, 189);
+            margin-left: 10px;
+            // background-color: rgb(184, 49, 189);
         }
     }
    
@@ -67,52 +68,53 @@ body {
                 // display: flex;
                 // flex-direction: column;
                 // justify-content: space-between;
-                margin-bottom: 15px;
+                height: 85px;
+                margin-top: 10px;
             }
         
             .temp {
-                width: 90px;
-                height: 90px;
-                background-color: rgb(49, 189, 49);
+                width: 110px;
+                height: 100px;
+                // background-color: rgb(49, 189, 49);
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: start;
             }
         
             .pressure {
-                width: 90px;
-                height: 90px;
-                background-color: rgb(130, 176, 97);
+                width: 110px;
+                height: 100px;
+                // background-color: rgb(130, 176, 97);
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: start;
             }
         
             .humidity {
-                width: 90px;
-                height: 90px;
-                background-color: rgb(82, 209, 205);
+                width: 110px;
+                height: 100px;
+                // background-color: rgb(82, 209, 205);
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: start;
             }
         
             .speed {
-                width: 90px;
-                height: 90px;
-                background-color: rgb(180, 159, 35);
+                width: 110px;
+                height: 100px;
+                // background-color: rgb(180, 159, 35);
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: start;
             }
         
             .degree {
-                width: 90px;
-                height: 90px;
-                background-color: rgb(49, 114, 189);
+                width: 110px;
+                height: 100px;
+                // background-color: rgb(49, 114, 189);
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
+                align-items: start;
             }
         }
     }

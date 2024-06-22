@@ -14,11 +14,11 @@ function weather() {
     .then((res) => res.json())
     .then((data) => {
       let temp = data.main.temp + " C";
-      let pressure = data.main.pressure;
+      let pressure = data.main.pressure + " hPa";
       let description = data.weather[0].description;
       let humidity = data.main.humidity + " %";
-      let speed = data.wind.speed;
-      let deg = data.wind.deg;
+      let speed = data.wind.speed + " m/s";
+      let deg = data.wind.deg + " degrees";
 
       let img = document.querySelector(".icon img");
       let icon = data.weather[0].icon;
