@@ -4,30 +4,29 @@ fetch(
   .then((res) => res.json())
   .then((data) => console.log(data));
 
+// let city = document.body.button.getAttribute("name");
+// console.log(city);
+
 function weather() {
   fetch(
     "http://api.openweathermap.org/data/2.5/weather?q=KYIV&temp=&pressure=&description=&humidity=&speed=&deg=&icon&units=metric&APPID=5d066958a60d315387d9492393935c19"
   )
-    //   fetch(
-    //     "http://api.openweathermap.org/data/2.5/weather?q=KYIV&temp=main.temp&pressure={pressure}&description={weather[0].description}&humidity={humidity}&speed={speed}&deg={deg}&icon&units=metric&APPID=5d066958a60d315387d9492393935c19"
-    //   )
     .then((res) => res.json())
     .then((data) => {
-      let temp = data.main.temp;
+      let temp = data.main.temp + " C";
       let pressure = data.main.pressure;
       let description = data.weather[0].description;
-      let humidity = data.main.humidity;
+      let humidity = data.main.humidity + " %";
       let speed = data.wind.speed;
       let deg = data.wind.deg;
 
-      let img = document.querySelector(".icon");
+      let img = document.querySelector(".icon img");
       let icon = data.weather[0].icon;
-      console.log(icon);
-      img.setAttribute("src", weather.icon);
+      img.setAttribute("src", `https://openweathermap.org/img/w/${icon}.png`);
       img.append(icon);
 
       let tempera = document.querySelector(".temp");
-      tempera.append(temp);
+      tempera.prepend(temp);
 
       let pres = document.querySelector(".pressure");
       pres.append(pressure);
@@ -45,4 +44,10 @@ function weather() {
       degree.append(deg);
     });
 }
-document.querySelector("button").addEventListener("click", weather);
+let kyivBtn = document.body.querySelector(".kyiv");
+console.log(kyivBtn);
+
+// document.querySelector(".kyiv").addEventListener("click", weather);
+
+/// try to add Kyiv not default
+document.querySelector(".kyiv").addEventListener("click", weather);
