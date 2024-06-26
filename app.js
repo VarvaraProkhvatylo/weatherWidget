@@ -4,15 +4,18 @@ fetch(
   .then((res) => res.json())
   .then((data) => console.log(data));
 
-// let city = document.body.button.getAttribute("name");
-// console.log(city);
-
 function weather() {
+  // fetch(
+  //   "http://api.openweathermap.org/data/2.5/weather?q=KYIV&temp=&pressure=&description=&humidity=&speed=&deg=&icon&units=metric&APPID=5d066958a60d315387d9492393935c19"
+  // )
   fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=KYIV&temp=&pressure=&description=&humidity=&speed=&deg=&icon&units=metric&APPID=5d066958a60d315387d9492393935c19"
+    "http://api.openweathermap.org/data/2.5/weather?q=&temp=&pressure=&description=&humidity=&speed=&deg=&icon&units=metric&APPID=5d066958a60d315387d9492393935c19"
   )
     .then((res) => res.json())
     .then((data) => {
+      let el = document.querySelector(".city");
+      let q = el.dataset.city;
+
       let temp = data.main.temp + " C";
       let pressure = data.main.pressure + " hPa";
       let description = data.weather[0].description;
@@ -44,10 +47,18 @@ function weather() {
       degree.append(deg);
     });
 }
-let kyivBtn = document.body.querySelector(".kyiv");
-console.log(kyivBtn);
+// let kyivBtn = document.body.querySelector(".kyiv");
+// console.log(kyivBtn);
 
 // document.querySelector(".kyiv").addEventListener("click", weather);
 
 /// try to add Kyiv not default
-document.querySelector(".kyiv").addEventListener("click", weather);
+// document
+//   .querySelector(".kyiv")
+//   .addEventListener("click", weather((city = "KYIV")));
+
+// document
+//   .querySelector(".london")
+//   .addEventListener("click", weather((q.dataset.city = "LONDON")));
+
+document.querySelector(".city").addEventListener("click", weather);
